@@ -8,11 +8,13 @@ import java.util.List;
 public class SchoolClass {
 
     int classNumber;
+    String classLetter;
     int numberOStudents;
     List<String> listOfStudents;
 
-    public SchoolClass(int classNumber, int numberOStudents, List<String> listOfStudents) {
+    public SchoolClass(int classNumber, String classLetter, int numberOStudents, List<String> listOfStudents) {
         this.classNumber = classNumber;
+        this.classLetter = classLetter;
         this.numberOStudents = numberOStudents;
         this.listOfStudents = listOfStudents;
     }
@@ -20,18 +22,10 @@ public class SchoolClass {
     FakerGenerator fakerGenerator = new FakerGenerator();
     RandomGenerator randomGenerator = new RandomGenerator();
 
-    public void getListOfStudents(int numberOfStudents) {
-        for (int i = 0; i < numberOfStudents; i++) {
-            listOfStudents.add(fakerGenerator.getFirstName());
-        }
-        System.out.println("Generate student list: ");
-    }
-
     public void addNewStudentInList() {
-
-        String randomName = fakerGenerator.getFirstName();
+        String randomName = fakerGenerator.generateRandomFirstName();
         listOfStudents.add(randomName);
-        System.out.println("Add student " + randomName + " in list");
+        System.out.println("Add student " + randomName + " in list. ");
     }
 
     public void removeStudentFromList() {
@@ -48,11 +42,10 @@ public class SchoolClass {
     }
 
     public Boolean doesTheListContainStudentName() {
-        String randomName = fakerGenerator.getFirstName();
+        String randomName = fakerGenerator.generateRandomFirstName();
         Boolean doesTheListContainSearchingName = listOfStudents.contains(randomName);
         System.out.println("Does the list contain student name: " + randomName + "?");
         return doesTheListContainSearchingName;
     }
-
 
 }

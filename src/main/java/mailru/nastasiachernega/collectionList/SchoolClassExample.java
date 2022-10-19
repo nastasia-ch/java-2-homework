@@ -1,27 +1,38 @@
 package mailru.nastasiachernega.collectionList;
 
+import mailru.nastasiachernega.utils.FakerGenerator;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class SchoolClassExample {
 
     public static void main(String[] args) {
 
-        SchoolClass schoolClass = new SchoolClass(10, 5,
-                new ArrayList<>());
+        SchoolClass ourClass = new SchoolClass(10, "A",
+                10, getRandomListOfStudents(10));
+        System.out.println(ourClass.classNumber + ourClass.classLetter + " class contains " +
+                ourClass.numberOStudents + " students: " + ourClass.listOfStudents);
 
-        schoolClass.getListOfStudents(schoolClass.numberOStudents);
-        System.out.println(schoolClass.listOfStudents);
+        ourClass.addNewStudentInList();
+        System.out.println("Now student list contains next students: " + ourClass.listOfStudents);
 
-        schoolClass.addNewStudentInList();
-        System.out.println(schoolClass.listOfStudents);
+        ourClass.removeStudentFromList();
+        System.out.println("Now student list contains next students: " + ourClass.listOfStudents);
 
-        schoolClass.removeStudentFromList();
-        System.out.println(schoolClass.listOfStudents);
+        System.out.println(ourClass.searchStudentInListByIndex());
 
-        System.out.println(schoolClass.searchStudentInListByIndex());
+        System.out.println(ourClass.doesTheListContainStudentName());
 
-        System.out.println(schoolClass.doesTheListContainStudentName());
+    }
 
+    static List<String> getRandomListOfStudents(int numberOfStudents) {
+        FakerGenerator fakerGenerator = new FakerGenerator();
+        List<String> listOfStudents = new ArrayList<>();
+        for (int i = 0; i < numberOfStudents; i++) {
+            listOfStudents.add(fakerGenerator.generateRandomFirstName());
+        }
+        return listOfStudents;
     }
 
 }
