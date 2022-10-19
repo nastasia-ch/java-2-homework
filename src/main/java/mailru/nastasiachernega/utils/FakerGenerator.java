@@ -13,4 +13,9 @@ public class FakerGenerator {
         return firstName;
     }
 
+    public String generateRandomColor() {
+        String color = faker.color().name();
+        return color;
+    }
+
 }
