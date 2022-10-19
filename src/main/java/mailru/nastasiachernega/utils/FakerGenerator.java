@@ -2,8 +2,6 @@ package mailru.nastasiachernega.utils;
 
 import com.github.javafaker.Faker;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 public class FakerGenerator {
@@ -18,6 +16,17 @@ public class FakerGenerator {
     public String generateRandomColor() {
         String color = faker.color().name();
         return color;
+    }
+
+    public String generateRandomDepartmentName() {
+        String departmentName = faker.commerce().department();
+        return departmentName;
+    }
+
+
+    public String generateRandomCompanyName() {
+        String companyName = faker.company().name();
+        return companyName;
     }
 
 }

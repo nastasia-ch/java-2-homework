@@ -1,4 +1,4 @@
-package mailru.nastasiachernega.collectionSet;
+package mailru.nastasiachernega.HashSet;
 
 import mailru.nastasiachernega.utils.FakerGenerator;
 
@@ -47,12 +47,7 @@ public class PackOfPencilsClass {
     public void doesTheSetContainColor() {
         String randomColor = fakerGenerator.generateRandomColor();
         System.out.println("Does our pack contains " + randomColor + " pencil ?");
-        if (colors.contains(randomColor)) {
-            System.out.println("Yes \n");
-        }
-        else  {
-            System.out.println("No \n");
-        }
+        System.out.println(colors.contains(randomColor));
     }
 
 }

@@ -1,4 +1,4 @@
-package mailru.nastasiachernega.collectionList;
+package mailru.nastasiachernega.ArrayList;
 
 import mailru.nastasiachernega.utils.FakerGenerator;
 import mailru.nastasiachernega.utils.RandomGenerator;
