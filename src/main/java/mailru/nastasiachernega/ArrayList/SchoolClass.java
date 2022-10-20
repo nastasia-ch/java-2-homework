@@ -44,7 +44,7 @@ public class SchoolClass {
     public Boolean doesTheListContainStudentName() {
         String randomName = fakerGenerator.generateRandomFirstName();
         Boolean doesTheListContainSearchingName = listOfStudents.contains(randomName);
-        System.out.println("Does the list contain student name: " + randomName + "?");
+        System.out.println("Does the list contain student name " + randomName + "?");
         return doesTheListContainSearchingName;
     }
 

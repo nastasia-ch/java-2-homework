@@ -12,13 +12,13 @@ public class SchoolClassExample {
         SchoolClass ourClass = new SchoolClass(10, "A",
                 10, getRandomListOfStudents(10));
         System.out.println(ourClass.classNumber + ourClass.classLetter + " class contains " +
-                ourClass.numberOStudents + " students: " + ourClass.listOfStudents);
+                ourClass.numberOStudents + " students: \n" + ourClass.listOfStudents + "\n");
 
         ourClass.addNewStudentInList();
-        System.out.println("Now student list contains next students: " + ourClass.listOfStudents);
+        System.out.println("Now student list contains next students: \n" + ourClass.listOfStudents + "\n");
 
         ourClass.removeStudentFromList();
-        System.out.println("Now student list contains next students: " + ourClass.listOfStudents);
+        System.out.println("Now student list contains next students: \n" + ourClass.listOfStudents + "\n");
 
         System.out.println(ourClass.searchStudentInListByIndex());
 

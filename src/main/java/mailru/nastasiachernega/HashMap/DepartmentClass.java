@@ -30,7 +30,6 @@ public class DepartmentClass {
 
     public void uploadInfoAboutNumberOfEmployeesInDepartment() {
         String newDepartment = fakerGenerator.generateRandomDepartmentName();
-        Integer numberOfEmployees = randomGenerator.getRandomInt(1,500);
         if (departments.containsKey(newDepartment)) {
             System.out.println("Department " + newDepartment + " is already exist. " +
                     "The number of employees will be overwritten. \n" +

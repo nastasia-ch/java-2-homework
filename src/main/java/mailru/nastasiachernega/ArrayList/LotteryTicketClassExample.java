@@ -1,6 +1,5 @@
 package mailru.nastasiachernega.ArrayList;
 
-import mailru.nastasiachernega.utils.FakerGenerator;
 import mailru.nastasiachernega.utils.RandomGenerator;
 
 import java.util.ArrayList;
@@ -12,7 +11,18 @@ public class LotteryTicketClassExample {
 
         LotteryTicketClass someLotteryTicket = new LotteryTicketClass(234,
                 getRandomLotteryTicket(6));
-        System.out.println(someLotteryTicket.lotteryTicket);
+
+        someLotteryTicket.printNumberOfLotteryTicket();
+
+        someLotteryTicket.updateNumbersOfLotteryTicket();
+
+        someLotteryTicket.removeOneNumber();
+
+        someLotteryTicket.addNewNumber();
+
+        someLotteryTicket.searchNumberByIndex();
+
+        someLotteryTicket.doesTheLotteryTicketContainNumber();
 
     }
 
